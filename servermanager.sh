@@ -71,7 +71,7 @@ function startServer() {
         sed -i "s/ServerPlayerMaxNum=[0-9]*/ServerPlayerMaxNum=$MAX_PLAYERS/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
 
-    if [[ -z ${PAL_SPAWN_NUM_RATE+x} ]]; then
+    if [[ ! -z ${PAL_SPAWN_NUM_RATE+x} ]]; then
     	echo "Setting PalSpawnNumRate to $PAL_SPAWN_NUM_RATE"
         sed -i "s/PalSpawnNumRate=[0-9]*/PalSpawnNumRate=$PAL_SPAWN_NUM_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
