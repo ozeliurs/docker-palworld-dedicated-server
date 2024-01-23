@@ -38,4 +38,4 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/${{ steps.downcase.outputs.downcase }}/bank:latest,ghcr.io/${{ steps.downcase.outputs.downcase }}/bank:${{ github.sha }}
+          tags: ghcr.io/${{ steps.downcase.outputs.downcase }}/docker-palworld-dedicated-server:latest,ghcr.io/${{ steps.downcase.outputs.downcase }}/docker-palworld-dedicated-server:${{ github.sha }}
