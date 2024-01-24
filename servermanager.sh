@@ -77,7 +77,7 @@ function startServer() {
     fi
 
     [[ ! -z ${PAL_EGG_DEFAULT_HATCHING_TIME+x} ]]; then
-        echo "Setting max-players to $PAL_EGG_DEFAULT_HATCHING_TIME"
+        echo "Setting PalEggDefaultHatchingTime to $PAL_EGG_DEFAULT_HATCHING_TIME"
         sed -i "s/PalEggDefaultHatchingTime=[0-9]*/PalEggDefaultHatchingTime=$PAL_EGG_DEFAULT_HATCHING_TIME/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
 
