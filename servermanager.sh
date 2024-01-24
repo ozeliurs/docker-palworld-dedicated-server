@@ -76,7 +76,7 @@ function startServer() {
         sed -i "s/PalSpawnNumRate=[0-9]*/PalSpawnNumRate=$PAL_SPAWN_NUM_RATE/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
 
-    [[ ! -z ${PAL_EGG_DEFAULT_HATCHING_TIME+x} ]]; then
+    if [[ ! -z ${PAL_EGG_DEFAULT_HATCHING_TIME+x} ]]; then
         echo "Setting PalEggDefaultHatchingTime to $PAL_EGG_DEFAULT_HATCHING_TIME"
         sed -i "s/PalEggDefaultHatchingTime=[0-9]*/PalEggDefaultHatchingTime=$PAL_EGG_DEFAULT_HATCHING_TIME/" ${GAME_PATH}/Pal/Saved/Config/LinuxServer/PalWorldSettings.ini
     fi
